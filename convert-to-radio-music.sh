@@ -44,21 +44,21 @@ done
 
 # make monos
 for i in *wav ; do
-	$sox $i -c 1 mono/$i
+	$sox "$i" -c 1 "mono/$i"
 done
 
 # normalise. feel free to comment this part if you don't want it
 cd mono
 
 for i in *wav ; do
-	$sox $i --norm -t sox - silence 1 0.1 1% reverse | $sox -t sox -b 16 - ../normalized/$i silence 1 0.1 1% reverse
+	$sox "$i" --norm -t sox - silence 1 0.1 1% reverse | $sox -t sox -b 16 - "../normalized/$i" silence 1 0.1 1% reverse
 done
 
 # make raw
 cd ../normalized
 
 for i in *wav ; do
-	$sox $i -t raw -b 16 ../raw/$i
+	$sox "$i" -t raw -b 16 "../raw/$i"
 done
 
 cd ../raw
