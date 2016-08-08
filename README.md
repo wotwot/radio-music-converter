@@ -10,7 +10,7 @@ sox and perls rename are used
 ## usage:
  cd into a folder with 16 bit 44.1 stereo wav files
  and
- sh ./convert-to-radio-music.sh
+ sh $whereverthiswassavedto/convert-to-radio-music.sh
 
  this will convert all wav files into radio music format ready to go into a folder on a micro SD.
 
