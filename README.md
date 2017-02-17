@@ -18,6 +18,8 @@ sox and perls rename are used
 
  the folder "raw" then contains the file(s) for the RadioMusic sd card.
 
+ the script play-radiomusic plays the encoded files
+
 ## License: cc-by-sa
 
 ## disclaimer

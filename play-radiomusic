@@ -1,0 +1,13 @@
+#!/bin/sh
+# play radio music files using play from the sox package
+# 20170217 wotwot
+# NO WARRANTY
+
+if [ -z "$*" ] ; then
+	echo "play what ?"
+	exit
+fi
+for i in $* ; do
+	play -t raw -r 44100 -e signed -b 16 -c 1 $i
+done
+
